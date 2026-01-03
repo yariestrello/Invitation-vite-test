@@ -2,7 +2,7 @@
 
 .message-section {
   padding: 4rem 1rem;
-  background-color: #fff0f5;
+  background-color: #ffffff;
   text-align: center;
 }
 
@@ -13,12 +13,14 @@
 
 .message-title {
   font-size: clamp(2rem, 5vw, 2.5rem);
-  color: #ff4d6d;
+  color: #201f1f;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .message-text {
   font-size: 1.2rem;
   line-height: 1.8;
   color: #333;
+  text-align: center;
 }
