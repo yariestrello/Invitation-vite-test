@@ -1,4 +1,4 @@
-import "./welcome.css";
+import "./Welcome.css";
 
 export default function WelcomeScreen({ onOpen }) {
   return (
