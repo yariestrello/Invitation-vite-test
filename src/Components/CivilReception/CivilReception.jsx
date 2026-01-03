@@ -1,4 +1,4 @@
-import "./civilReception.css";
+import "./CivilReception.css";
 
 export default function CivilReception() {
   return (
