@@ -1,5 +1,12 @@
 /* src/components/hero/Hero.css */
 
+@font-face {
+  font-family: "AmsterdamFour";
+  src: url("/Font/AmsterdamFour.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .hero {
   min-height: 100vh;
   background-image: url("/img/PHOTO-2025-05-29-23-23-24.JPEG");
@@ -21,6 +28,7 @@
 }
 
 .hero-names {
+  font-family: "AmsterdamFour";
   font-size: clamp(2.2rem, 6vw, 4rem);
   letter-spacing: 0.15rem;
 }

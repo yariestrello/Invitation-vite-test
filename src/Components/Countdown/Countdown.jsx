@@ -34,8 +34,8 @@ export default function Countdown() {
 
   return (
     <section className="countdown">
-    <h1>SÁBADO <br />
-        16.05.2026</h1>
+    <h1>SÁBADO</h1>
+     <h1>16.05.2026</h1>
       <h2>Faltan:</h2>
       <div className="countdown-timer">
         <div className="time-box">

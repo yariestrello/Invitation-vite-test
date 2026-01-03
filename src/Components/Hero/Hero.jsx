@@ -4,7 +4,7 @@ export default function Hero({ onToggleMusic, isPlaying }) {
   return (
     <section className="hero">
       <div className="hero-overlay">
-        <h1 className="hero-names">Yaritza & Gael</h1>
+        <h1 className="hero-names">Yaritza&Gael</h1>
         <p className="hero-date">16 · Mayo · 2026</p>
       </div>
 

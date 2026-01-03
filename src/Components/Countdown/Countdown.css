@@ -1,46 +1,100 @@
 /* src/components/countdown/Countdown.css */
 
 .countdown {
-  padding: 4rem 1rem;
-  background: #3333;
-  text-align: center;
-}
+  padding: 6rem 1rem;
+  min-height: 100vh;
 
-.countdown h1{
-font-size: 3rem;
-  color: #f9f9f9;
-  margin-bottom: 2rem;
-  text-align: center;
-}
-.countdown h2 {
-  font-size: 2rem;
-  color: #f9f9f9;
-  margin-bottom: 2rem;
-  text-align: center;
-}
+  background:
+    radial-gradient(circle at top left, rgba(255,255,255,0.08), transparent 40%),
+    radial-gradient(circle at bottom right, rgba(255,255,255,0.05), transparent 45%),
+    linear-gradient(135deg, #111, #000);
 
-.countdown-timer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  text-align: center;
+}
+
+/* TITULO FECHA */
+.countdown h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 3rem;
+  color: #f2eee9;
+  letter-spacing: 4px;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* SUBTITULO */
+.countdown h2 {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.5rem;
+  color: #d6d1c8;
+  letter-spacing: 1px;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+/* CONTENEDOR */
+.countdown-timer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 1.5rem;
-  flex-wrap: wrap;
+  max-width: 520px;
+  margin: 0 auto;
 }
 
+/* CAJAS */
 .time-box {
-  background: #ffb3b3;
-  color: white;
-  padding: 1rem 1.5rem;
-  border-radius: 15px;
-  min-width: 80px;
+  background: #f3ede4;
+  color: #111;
+
+  border: 1px solid #c9bfae;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.45);
+
+  border-radius: 18px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  aspect-ratio: 1 / 1;
 }
 
+/* NUMERO */
 .time-box span {
-  display: block;
-  font-size: 2rem;
-  font-weight: bold;
+  font-family: "Cinzel", serif;
+  font-size: 2.4rem;
+  font-weight: 600;
+  line-height: 1;
 }
 
+/* TEXTO */
 .time-box p {
-  margin: 0;
-  font-size: 1rem;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  margin-top: 0.4rem;
+  text-transform: uppercase;
+}
+
+/* RESPONSIVE */
+@media (max-width: 640px) {
+  .countdown h1 {
+    font-size: 2.3rem;
+  }
+
+  .countdown h2 {
+    font-size: 1.3rem;
+  }
+
+  .countdown-timer {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+
+  .time-box span {
+    font-size: 2.1rem;
+  }
 }

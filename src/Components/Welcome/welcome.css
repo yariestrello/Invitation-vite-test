@@ -26,7 +26,7 @@
   align-items: center;
   height: 100vh;
 
-  background-image: url("/img/Nuestra Boda.png");
+  background-image: url("/img/PHOTO-2025-05-29-23-23-24.JPEG");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -80,7 +80,7 @@ padding-right: 25px;
   align-items: center;
   justify-content: center;
 
-  backdrop-filter: blur(0px);
+  backdrop-filter: blur(2px);
 
   animation: heartbeat 2.8s ease-in-out infinite;
   transition: transform 0.4s ease;
@@ -91,7 +91,7 @@ padding-right: 25px;
   font-family: "AmsterdamFour", serif;
   font-size: 3em;
   line-height: 1;
-  color: #333333;
+  color: #FFFFFF;
   pointer-events: none;
 }
 
@@ -121,7 +121,7 @@ padding-right: 25px;
   font-size: 2rem;
   letter-spacing: 0.18em;
   /*text-transform: uppercase;*/
-  color: #201f1f;
+  color: #FFFFFF;
 }
 
 /* =========================
