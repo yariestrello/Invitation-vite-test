@@ -1,4 +1,4 @@
-import "./religiousCeremony.css";
+import "./ReligiousCeremony.css";
 
 export default function ReligiousCeremony() {
   return (
