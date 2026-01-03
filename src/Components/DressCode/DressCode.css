@@ -1,0 +1,84 @@
+
+.dresscode {
+  padding: 4rem 1.5rem;
+  background-color: #ffffff;
+  text-align: center;
+}
+
+/* Wrapper opcional para controlar el ancho total del bloque dresscode */
+.dresscode__container {
+  max-width: 800px; /* antes 520px; amplia para dar espacio a imágenes más grandes */
+  margin: 0 auto;
+}
+
+/* Mensaje */
+.dresscode__message {
+  max-width: 60ch; /* más semántico que px fijos */
+  margin: 0 auto 2.5rem;
+  font-size: 1rem;
+  color: #131312;
+  line-height: 1.6;
+  font-style: italic;
+}
+
+/* Título */
+.dresscode__title {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: #333333; /* más legible que #3333 */
+  margin-bottom: 2.2rem;
+  text-align: center;
+}
+
+/* Íconos */
+.dresscode__icons {
+  display: flex;
+  justify-content: center;
+  gap: clamp(1rem, 3vw, 2.5rem);
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.dresscode__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Imagen responsiva y más grande */
+.dresscode__item img {
+  width: clamp(110px, 12vw, 170px); /* ↑ de 80px; escala con viewport */
+  height: auto;                     /* evita deformación */
+  aspect-ratio: auto;               /* deja que la imagen mantenga su proporción */
+  object-fit: contain;              /* asegura buen encuadre si usas un frame */
+  margin-bottom: 0.6rem;
+}
+
+/* Texto bajo cada ícono */
+.dresscode__item p {
+  font-size: 1rem;
+  color: #5a2f26;
+  font-weight: 500;
+}
+
+/* Reglas */
+.dresscode__description {
+  max-width: 65ch; /* semántico y legible */
+  margin: 0 auto;
+  font-size: 1rem;
+  color: #33333f;
+  line-height: 1.6;
+}
+
+/* Ajustes en móviles: más grandes para compensar zoom */
+@media (max-width: 480px) {
+  .dresscode {
+    padding: 3rem 1rem;
+  }
+  .dresscode__item img {
+    width: clamp(130px, 40vw, 180px);
+  }
+  .dresscode__title {
+    font-size: clamp(1.8rem, 6vw, 2.4rem);
+  }
+}

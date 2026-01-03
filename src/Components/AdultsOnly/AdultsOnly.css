@@ -1,0 +1,61 @@
+.adults {
+  display: flex;
+  min-height: 70vh;
+  background-color: #f6efe9;
+  color: #5a2f26;
+}
+
+/* Texto */
+.adults__text {
+  flex: 1;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.adults__text h2 {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  color: #7e3f2e;
+  margin-bottom: 1.5rem;
+}
+
+.adults__text p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 1.2rem;
+}
+
+.adults__thanks {
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+/* Imagen */
+.adults__image {
+  flex: 1;
+  overflow: hidden;
+}
+
+.adults__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 📱 Responsive */
+@media (max-width: 768px) {
+  .adults {
+    flex-direction: column;
+  }
+
+  .adults__text {
+    padding: 3rem 2rem;
+    text-align: center;
+  }
+
+  .adults__image {
+    height: 300px;
+  }
+}

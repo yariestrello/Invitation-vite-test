@@ -1,0 +1,147 @@
+/* =========================
+   CEREMONIA RELIGIOSA
+   ========================= */
+
+.ceremony {
+  position: relative;
+
+  /* 🔑 clave para mobile */
+  min-height: 100svh;
+  padding: 60px 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+  background-color: #4A241B;
+}
+
+/* =========================
+   VIDEO DE FONDO
+   ========================= */
+
+.ceremony__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+  object-position: center 55%;
+
+  z-index: 0;
+}
+
+/* =========================
+   OVERLAY
+   ========================= */
+
+.ceremony__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(74, 36, 27, 0.35),
+    rgba(74, 36, 27, 0.7)
+  );
+  z-index: 1;
+}
+
+/* =========================
+   CONTENIDO
+   ========================= */
+
+.ceremony__content {
+  position: relative;
+  z-index: 2;
+
+  max-width: 380px;
+  margin: 0 auto;
+
+  color: #FFF5E6;
+  text-align: center;
+  padding: 0 20px;
+
+  font-family: "Georgia", serif;
+}
+
+/* =========================
+   TEXTOS
+   ========================= */
+
+.ceremony__title {
+  font-size: 2.1rem;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.ceremony__details p {
+  margin: 6px 0;
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
+
+/* =========================
+   BOTONES
+   ========================= */
+
+.ceremony__buttons {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  align-items: center;
+}
+
+.ceremony__button {
+  width: 100%;
+  max-width: 260px;
+
+  padding: 14px 20px;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.95rem;
+
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+/* Botón principal */
+.ceremony__button.primary {
+  background-color: #FFF5E6;
+  color: #7E3F2E;
+}
+
+.ceremony__button.primary:hover {
+  background-color: #FFD9C8;
+}
+
+/* Botón secundario */
+.ceremony__button.secondary {
+  border: 1px solid #FFF5E6;
+  color: #FFF5E6;
+}
+
+.ceremony__button.secondary:hover {
+  background-color: rgba(255, 245, 230, 0.15);
+}
+
+/* =========================
+   DESKTOP
+   ========================= */
+
+@media (min-width: 768px) {
+  .ceremony {
+    min-height: 70vh;
+    padding: 80px 0;
+  }
+
+  .ceremony__title {
+    font-size: 2.6rem;
+  }
+
+  .ceremony__buttons {
+    flex-direction: row;
+  }
+}

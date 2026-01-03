@@ -1,0 +1,76 @@
+.family {
+  padding: 5rem 1.5rem;
+  background-color: #fff5f2;
+  text-align: center;
+}
+
+.family__title {
+  font-family: "Playfair Display", serif;
+  font-size: 2.2rem;
+  color: #5a3a32;
+  margin-bottom: 3rem;
+}
+
+.family__block {
+  margin-bottom: 3.5rem;
+}
+
+.family__block h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.5rem;
+  color: #7a4a3a;
+  margin-bottom: 1.5rem;
+}
+
+.family__group {
+  margin-bottom: 1.5rem;
+}
+
+.family__group p {
+  margin: 4px 0;
+  font-size: 1rem;
+  color: #3a2a25;
+}
+
+.role {
+  font-weight: 600;
+  color: #8a5a4a;
+  margin-bottom: 6px;
+}
+
+.family__pair {
+  margin-bottom: 1.2rem;
+}
+
+.family__pair span {
+  display: block;
+  font-weight: 600;
+  color: #8a5a4a;
+  margin-bottom: 4px;
+}
+
+.family__pair p {
+  margin: 0;
+  font-size: 1rem;
+  color: #3a2a25;
+}
+
+/* 🌐 Web */
+@media (min-width: 768px) {
+  .family {
+    padding: 6rem 2rem;
+  }
+
+  .family__title {
+    font-size: 2.6rem;
+  }
+
+  .family__block h3 {
+    font-size: 1.7rem;
+  }
+
+  .family__group p,
+  .family__pair p {
+    font-size: 1.05rem;
+  }
+}

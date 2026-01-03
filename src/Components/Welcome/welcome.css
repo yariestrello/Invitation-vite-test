@@ -1,0 +1,152 @@
+/* =========================
+   Tipografía Iniciales
+   ========================= */
+
+@font-face {
+  font-family: "AmsterdamFour";
+  src: url("/Font/AmsterdamFour.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "BrittanySignature";
+  src: url("/Font/BrittanySignature.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* =========================
+   Layout principal
+   ========================= */
+
+.welcome {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  background-image: url("/img/Nuestra Boda.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  text-align: center;
+  position: relative;
+}
+
+.welcome::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.25);
+}
+
+.welcome__content {
+  /*background-color: rgba(0, 0, 0, 0.45);*/
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+
+
+
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* =========================
+   Botón protagonista
+   ========================= */
+
+.welcome__button {
+  width: clamp(370px, 45vw, 280px);
+  height: clamp(370px, 45vw, 280px);
+
+  font-size: clamp(16px, 3vw, 20px);
+
+  border-radius: 50%;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, 0.9);
+padding-right: 25px;
+  cursor: pointer;
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  backdrop-filter: blur(0px);
+
+  animation: heartbeat 2.8s ease-in-out infinite;
+  transition: transform 0.4s ease;
+}
+
+/* Iniciales */
+.welcome__button-initials {
+  font-family: "AmsterdamFour", serif;
+  font-size: 3em;
+  line-height: 1;
+  color: #333333;
+  pointer-events: none;
+}
+
+/* Pulso exterior */
+.welcome__button::after {
+  content: "";
+  position: absolute;
+  inset: -8%;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+  animation: ripple 2.8s ease-in-out infinite;
+}
+
+/* Hover */
+.welcome__button:hover {
+  transform: scale(1.08);
+  animation-play-state: paused;
+}
+
+/* =========================
+   Texto debajo
+   ========================= */
+
+.welcome__below-text {
+  font-family: "BrittanySignature";
+  margin-top: 1.6rem;
+  font-size: 2rem;
+  letter-spacing: 0.18em;
+  /*text-transform: uppercase;*/
+  color: #201f1f;
+}
+
+/* =========================
+   Animaciones
+   ========================= */
+
+@keyframes heartbeat {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.12);
+  }
+  60% {
+    transform: scale(1);
+  }
+}
+
+@keyframes ripple {
+  0% {
+    transform: scale(1);
+    opacity: 0.6;
+  }
+  100% {
+    transform: scale(2.3);
+    opacity: 0;
+  }
+}

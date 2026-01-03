@@ -1,0 +1,46 @@
+/* src/components/countdown/Countdown.css */
+
+.countdown {
+  padding: 4rem 1rem;
+  background: #3333;
+  text-align: center;
+}
+
+.countdown h1{
+font-size: 3rem;
+  color: #f9f9f9;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.countdown h2 {
+  font-size: 2rem;
+  color: #f9f9f9;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.time-box {
+  background: #ffb3b3;
+  color: white;
+  padding: 1rem 1.5rem;
+  border-radius: 15px;
+  min-width: 80px;
+}
+
+.time-box span {
+  display: block;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.time-box p {
+  margin: 0;
+  font-size: 1rem;
+}

@@ -1,0 +1,187 @@
+/*****************************************************
+  RESET BÁSICO
+  Evita inconsistencias entre navegadores
+*****************************************************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*****************************************************
+  CONFIGURACIÓN BASE DEL DOCUMENTO
+*****************************************************/
+html, body {
+  width: 100%;
+  overflow-x: hidden;        /* Evita scroll horizontal en móvil */
+}
+
+body {
+  font-family: 'Georgia', serif;  /* Tipografía elegante base */
+  line-height: 1.5;               /* Lectura cómoda */
+  color: #fff;
+  background-color: rgba(51, 51, 51, 0.957);
+  -webkit-font-smoothing: antialiased;
+}
+
+/*****************************************************
+  IMÁGENES RESPONSIVAS
+  Nunca rompen el layout
+*****************************************************/
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/*****************************************************
+  ESTRUCTURA DE SECCIONES
+  Cada sección se comporta como una "pantalla"
+*****************************************************/
+section {
+  min-height: 100vh;               /* Ocupa toda la pantalla */
+  padding: 2rem 1.5rem;            /* Espaciado cómodo en móvil */
+  display: flex;
+  flex-direction: column;          /* Mobile-first */
+  justify-content: center;
+  position: relative;
+}
+
+/*****************************************************
+  CONTENEDOR CENTRAL
+  Limita ancho en pantallas grandes
+*****************************************************/
+.container {
+  width: 100%;
+  max-width: 1200px;               /* Máximo ancho desktop */
+  margin: 0 auto;                  /* Centrado horizontal */
+}
+
+/*****************************************************
+  TIPOGRAFÍA RESPONSIVE
+  clamp() ajusta tamaño según viewport
+*****************************************************/
+h1 {
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  font-weight: 500;
+  text-align: center;
+  
+}
+
+h2 {
+  font-size: clamp(1.5rem, 5vw, 2.5rem);
+  font-weight: 400;
+  text-align: center;
+}
+
+h3 {
+  font-size: clamp(1.2rem, 4vw, 1.8rem);
+  font-weight: 400;
+}
+
+p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+/*****************************************************
+  UTILIDADES DE FLEX
+  Reusables para layout
+*****************************************************/
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*****************************************************
+  BOTÓN BASE
+  Para "Pulse aquí para abrir"
+*****************************************************/
+.button {
+  background: transparent;
+  border: 1px solid #222;
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background: #222;
+  color: #fff;
+}
+
+/*****************************************************
+  HERO (FONDO + OVERLAY)
+*****************************************************/
+.hero {
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+}
+
+.hero__overlay {
+  background: rgba(0, 0, 0, 0.4);  /* Oscurece imagen */
+  padding: 3rem 1.5rem;
+}
+
+/*****************************************************
+  GALERÍA / CARRUSEL
+*****************************************************/
+.gallery {
+  display: flex;
+  overflow-x: auto;
+  gap: 1rem;
+  scroll-snap-type: x mandatory;
+}
+
+.gallery img {
+  scroll-snap-align: center;
+  border-radius: 8px;
+}
+
+/*****************************************************
+  MEDIA QUERIES
+  Mejoras para pantallas grandes
+*****************************************************/
+
+/* Tablet */
+@media (min-width: 768px) {
+  section {
+    padding: 4rem 2rem;
+  }
+
+  p {
+    font-size: 1.1rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  section {
+    padding: 6rem 3rem;
+  }
+
+  h1, h2, p {
+    text-align: left;
+  }
+}
+
+/*****************************************************
+  ACCESIBILIDAD
+  Respeta usuarios con motion reducido
+*****************************************************/
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+

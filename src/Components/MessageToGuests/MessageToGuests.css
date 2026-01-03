@@ -1,0 +1,24 @@
+/* src/components/message/MessageToGuests.css */
+
+.message-section {
+  padding: 4rem 1rem;
+  background-color: #fff0f5;
+  text-align: center;
+}
+
+.message-container {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.message-title {
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  color: #ff4d6d;
+  margin-bottom: 1.5rem;
+}
+
+.message-text {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #333;
+}
