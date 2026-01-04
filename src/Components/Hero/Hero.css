@@ -9,14 +9,14 @@
 
 .hero {
   min-height: 100vh;
-  background-image: url("/img/PHOTO-2025-05-29-23-23-24.JPEG");
+  background-image: url("/img/fondoUnoNew.jpeg");
   background-size: cover;
   background-position: center;
   position: relative;
 }
 
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.45);
+  background: rgba(0, 0, 0, 0.776);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
