@@ -10,7 +10,7 @@
   justify-content: center;
   gap: 2rem;
 
-  background-image: url("/img/Recepcion.jpeg");
+  background-image: url("/img/elrecuerdoIlustracion.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -117,7 +117,7 @@
    FRENTE (IMAGEN LIMPIA)
 ============================= */
 .cr-card-front {
-  background-image: url("/img/Recepcion.jpeg");
+  background-image: url("/img/elrecuerdoIlustracion.png");
   background-size: cover;
   background-position: center;
 }
