@@ -26,7 +26,7 @@
   align-items: center;
   height: 100vh;
 
-  background-image: url("/img/PHOTO-2025-05-29-23-23-24.JPEG");
+  background-image: url("/img/fondoBlancoNew.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -39,7 +39,7 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.25);
+  background: rgba(0, 0, 0, 0);
 }
 
 .welcome__content {
@@ -71,7 +71,7 @@
 
   border-radius: 50%;
   background: transparent;
-  border: 2px solid rgba(255, 255, 255, 0.9);
+  border: 2px solid rgba(51, 51, 51, 0.9);
 padding-right: 25px;
   cursor: pointer;
   position: relative;
@@ -91,7 +91,7 @@ padding-right: 25px;
   font-family: "AmsterdamFour", serif;
   font-size: 3em;
   line-height: 1;
-  color: #FFFFFF;
+  color: #333333;
   pointer-events: none;
 }
 
@@ -101,7 +101,7 @@ padding-right: 25px;
   position: absolute;
   inset: -8%;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.45);
+  border: 1px solid rgba(56, 54, 54, 0.45);
   animation: ripple 2.8s ease-in-out infinite;
 }
 
@@ -121,7 +121,7 @@ padding-right: 25px;
   font-size: 2rem;
   letter-spacing: 0.18em;
   /*text-transform: uppercase;*/
-  color: #FFFFFF;
+  color: #333333;
 }
 
 /* =========================
