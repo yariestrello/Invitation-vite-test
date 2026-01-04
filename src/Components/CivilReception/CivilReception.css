@@ -1,147 +1,196 @@
-/* =========================
-   CivilReception
-   ========================= */
-
-.ceremony {
-  position: relative;
-
-  /* 🔑 clave para mobile */
-  min-height: 100svh;
-  padding: 60px 0;
-
+/* =============================
+   SECCIÓN CON FONDO
+============================= */
+.cr-section {
+  min-height: 100vh;
+  width: 100%;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 2rem;
 
+  background-image: url("/img/Recepcion.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
   overflow: hidden;
-  background-color: #4A241B;
 }
 
-/* =========================
-   VIDEO DE FONDO
-   ========================= */
-
-.ceremony__video {
+/* OVERLAY OSCURO + BLUR */
+.cr-section::before {
+  content: "";
   position: absolute;
   inset: 0;
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
-  object-position: center 55%;
-
-  z-index: 0;
-}
-
-/* =========================
-   OVERLAY
-   ========================= */
-
-.ceremony__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(74, 36, 27, 0.35),
-    rgba(74, 36, 27, 0.7)
-  );
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   z-index: 1;
 }
 
-/* =========================
-   CONTENIDO
-   ========================= */
-
-.ceremony__content {
+/* =============================
+   TÍTULO EXTERIOR
+============================= */
+.cr-section-title {
   position: relative;
   z-index: 2;
 
-  max-width: 380px;
-  margin: 0 auto;
+  font-family: "Brittany Signature", cursive;
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: #ffffff;
 
-  color: #FFF5E6;
   text-align: center;
-  padding: 0 20px;
-
-  font-family: "Georgia", serif;
+  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* =========================
-   TEXTOS
-   ========================= */
+/* =============================
+   CARD CONTAINER
+============================= */
+.cr-card-container {
+  position: relative;
+  z-index: 2;
 
-.ceremony__title {
-  font-size: 2.1rem;
-  margin-bottom: 16px;
-  font-weight: 500;
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 3 / 4;
+  perspective: 1200px;
 }
 
-.ceremony__details p {
-  margin: 6px 0;
-  font-size: 0.95rem;
-  line-height: 1.45;
+/* BORDE BRILLANTE EXTERIOR */
+.cr-card-container::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 28px;
+
+  background: linear-gradient(
+    120deg,
+    transparent 30%,
+    rgba(255, 255, 255, 0.9),
+    transparent 70%
+  );
+
+  opacity: 0;
+  animation: cr-glow 3.5s ease-in-out infinite;
 }
 
-/* =========================
-   BOTONES
-   ========================= */
+@keyframes cr-glow {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
 
-.ceremony__buttons {
-  margin-top: 28px;
+/* =============================
+   CARD
+============================= */
+.cr-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.9s ease;
+  cursor: pointer;
+}
+
+.cr-card-container:hover .cr-card {
+  transform: rotateY(180deg);
+}
+
+/* =============================
+   CARAS
+============================= */
+.cr-card-face {
+  position: absolute;
+  inset: 0;
+  border-radius: 26px;
+  backface-visibility: hidden;
+  overflow: hidden;
+
+  box-shadow:
+    0 25px 45px rgba(0, 0, 0, 0.25),
+    0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+/* =============================
+   FRENTE (IMAGEN LIMPIA)
+============================= */
+.cr-card-front {
+  background-image: url("/img/Recepcion.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+/* =============================
+   REVERSO
+============================= */
+.cr-card-back {
+  transform: rotateY(180deg);
+  background: #ffffff;
+
   display: flex;
   flex-direction: column;
-  gap: 14px;
   align-items: center;
+  justify-content: center;
+
+  padding: 2.2rem;
+  text-align: center;
 }
 
-.ceremony__button {
-  width: 100%;
-  max-width: 260px;
+/* =============================
+   TEXTO REVERSO
+============================= */
+.cr-back-title {
+  font-family: "Playfair Display", serif;
+  font-size: 1.9rem;
+  margin-bottom: 1.3rem;
+  color: #000;
+}
 
-  padding: 14px 20px;
-  border-radius: 30px;
-  font-weight: 600;
-  font-size: 0.95rem;
+.cr-back-details p {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
 
+/* =============================
+   BOTONES
+============================= */
+.cr-back-buttons {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+}
+
+.cr-back-buttons a {
+  font-family: "Cinzel", serif;
+  font-size: 0.8rem;
+  letter-spacing: 1.4px;
+
+  padding: 0.75rem 1.9rem;
+  border-radius: 999px;
+
+  border: 1px solid #000;
+  color: #000;
+  background: transparent;
   text-decoration: none;
+
   transition: all 0.3s ease;
 }
 
-/* Botón principal */
-.ceremony__button.primary {
-  background-color: #FFF5E6;
-  color: #7E3F2E;
+.cr-back-buttons a:hover {
+  background: #000;
+  color: #fff;
 }
 
-.ceremony__button.primary:hover {
-  background-color: #FFD9C8;
-}
-
-/* Botón secundario */
-.ceremony__button.secondary {
-  border: 1px solid #FFF5E6;
-  color: #FFF5E6;
-}
-
-.ceremony__button.secondary:hover {
-  background-color: rgba(255, 245, 230, 0.15);
-}
-
-/* =========================
-   DESKTOP
-   ========================= */
-
-@media (min-width: 768px) {
-  .ceremony {
-    min-height: 70vh;
-    padding: 80px 0;
-  }
-
-  .ceremony__title {
+/* =============================
+   MOBILE
+============================= */
+@media (max-width: 480px) {
+  .cr-section-title {
     font-size: 2.6rem;
-  }
-
-  .ceremony__buttons {
-    flex-direction: row;
   }
 }

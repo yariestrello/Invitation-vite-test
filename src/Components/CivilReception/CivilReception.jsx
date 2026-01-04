@@ -2,49 +2,48 @@ import "./CivilReception.css";
 
 export default function CivilReception() {
   return (
-    <section className="ceremony">
-      {/* Video de fondo */}
-      <video
-        className="ceremony__video"
-        src="/Videos/VideoElRecuerdo.mp4"
-        autoPlay
-        muted
-        loop
-        playsInline
-      />
+    <section className="cr-section">
 
-      {/* Overlay oscuro para legibilidad */}
-      <div className="ceremony__overlay" />
+      {/* TÍTULO EXTERIOR */}
+      <h1 className="cr-section-title">Recepción & Civil</h1>
 
-      {/* Contenido encima del video */}
-      <div className="ceremony__content">
-        <h2 className="ceremony__title">Ceremonia Civil 
-        <br></br> & Recepción</h2>
+      <div className="cr-card-container">
+        <div className="cr-card">
 
-        <div className="ceremony__details">
-          <p>📍 Calle Manantiales entre Blvd. Luis Donaldo Colosio y Blvd. Jesús Valdez Sánchez</p>
-          <p>🕊️ Sábado 16 de Mayo · 6:00 PM</p>
-          <p>📌 Saltillo, Coahuila</p>
-        </div>
+          {/* FRENTE */}
+          <div className="cr-card-face cr-card-front">
+            {/* Imagen de portada */}
+          </div>
 
-        <div className="ceremony__buttons">
-          <a
-            href="https://maps.app.goo.gl/9x2C9X4odTgSn9Si7"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ceremony__button primary"
-          >
-            📍 Cómo llegar
-          </a>
+          {/* REVERSO */}
+          <div className="cr-card-face cr-card-back">
+            <h2 className="cr-back-title">Dirección</h2>
 
-          <a
-            href="https://waze.com/ul?ll=25.4434351,-100.9281122&navigate=yes"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="ceremony__button secondary"
-          >
-            📍Abrir en Waze
-          </a>
+            <div className="cr-back-details">
+              <p>El Recuerdo Jardín,Torrecillas, 25298 </p>
+              <p>Sábado 16 de Mayo · 6:30 PM</p>
+              <p>Saltillo, Coahuila</p>
+            </div>
+
+            <div className="cr-back-buttons">
+              <a
+                href="https://maps.app.goo.gl/kgCBD5CzKxGPo58AA"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                CÓMO LLEGAR
+              </a>
+
+              <a
+                href="https://www.waze.com/ul?q=El+Recuerdo+Jard%C3%ADn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                ABRIR EN WAZE
+              </a>
+            </div>
+          </div>
+
         </div>
       </div>
     </section>
