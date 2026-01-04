@@ -1,65 +1,67 @@
-/* ===============================
-   RELIGIOUS CEREMONY – FLIP CARD
-   =============================== */
-
-.rc-card-section {
+/* =============================
+   SECCIÓN CON FONDO
+============================= */
+.rc-section {
   min-height: 100vh;
-  background: #ffffff;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  padding: 3rem 1rem;
-}
+  justify-content: center;
+  gap: 2rem;
 
-/* CONTENEDOR PRINCIPAL */
-.rc-card-container {
-  width: 340px;
-  height: 460px;
-  perspective: 1200px;
-  position: relative;
-  cursor: pointer;
-}
-
-/* ESTADO FLIP */
-.rc-card-container.rc-flipped .rc-card-front {
-  transform: rotateY(180deg);
-}
-
-.rc-card-container.rc-flipped .rc-card-back {
-  transform: rotateY(0deg);
-}
-
-/* CARAS BASE */
-.rc-card-face {
-  position: absolute;
-  inset: 0;
-  border-radius: 24px;
-  overflow: hidden;
-  backface-visibility: hidden;
-  transition: transform 0.8s ease;
-  box-shadow: 0 18px 40px rgba(0, 0, 0, 0.18);
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  background: #fff;
-}
-
-/* ===============================
-   FRENTE (PORTADA CON IMAGEN)
-   =============================== */
-
-.rc-card-front {
   background-image: url("/img/iglesiaNew.jpeg");
   background-size: cover;
   background-position: center;
-  transform: rotateY(0deg);
+  position: relative;
+  overflow: hidden;
 }
 
-/* Borde animado sutil */
-.rc-card-front::before {
+/* OVERLAY + BLUR */
+.rc-section::before {
   content: "";
   position: absolute;
   inset: 0;
-  border-radius: 24px;
-  pointer-events: none;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(6px);
+  z-index: 1;
+}
+
+/* =============================
+   TÍTULO EXTERIOR
+============================= */
+.rc-section-title {
+  position: relative;
+  z-index: 2;
+
+  font-family: "Brittany Signature", cursive;
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: #ffffff;
+
+  text-align: center;
+  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* =============================
+   CARD CONTAINER
+============================= */
+.rc-card-container {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 360px;
+  aspect-ratio: 3 / 4;
+  perspective: 1200px;
+}
+
+/* BORDE BRILLANTE */
+.rc-card-container::before {
+  content: "";
+  position: absolute;
+  inset: -4px;
+  border-radius: 28px;
 
   background: linear-gradient(
     120deg,
@@ -72,140 +74,120 @@
   animation: rc-glow 3.5s ease-in-out infinite;
 }
 
-/* Overlay elegante */
-.rc-front-overlay {
+@keyframes rc-glow {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+
+/* =============================
+   CARD
+============================= */
+.rc-card {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.9s ease;
+  cursor: pointer;
+}
+
+.rc-card-container:hover .rc-card {
+  transform: rotateY(180deg);
+}
+
+/* =============================
+   CARAS
+============================= */
+.rc-card-face {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to bottom,
-    rgba(0, 0, 0, 0.15),
-    rgba(0, 0, 0, 0.6)
-  );
+  border-radius: 26px;
+  backface-visibility: hidden;
+  overflow: hidden;
 
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding-bottom: 2.4rem;
-  text-align: center;
+  box-shadow:
+    0 25px 45px rgba(0, 0, 0, 0.25),
+    0 10px 25px rgba(0, 0, 0, 0.18);
 }
 
-/* TÍTULO PORTADA */
-.rc-front-title {
-  font-family: "Playfair Display", serif;
-  font-size: 2.1rem;
-  font-weight: 500;
-  color: #333333;
-  letter-spacing: 1px;
+/* =============================
+   FRENTE
+============================= */
+.rc-card-front {
+  background-image: url("/img/iglesiaNew.jpeg");
+  background-size: cover;
+  background-position: center;
 }
 
-/* ===============================
-   REVERSO (DETALLES)
-   =============================== */
-
+/* =============================
+   REVERSO
+============================= */
 .rc-card-back {
-  transform: rotateY(-180deg);
+  transform: rotateY(180deg);
   background: #ffffff;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
-  padding: 2.4rem;
+  padding: 2.2rem;
   text-align: center;
 }
 
-/* TÍTULO REVERSO */
+/* =============================
+   TEXTO REVERSO
+============================= */
 .rc-back-title {
   font-family: "Playfair Display", serif;
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-bottom: 1.4rem;
+  font-size: 1.9rem;
+  margin-bottom: 1.3rem;
   color: #000;
 }
 
-/* DETALLES */
-.rc-back-details {
+.rc-back-details p {
   font-family: "Cormorant Garamond", serif;
-  font-size: 1.05rem;
-  color: #111;
-  line-height: 1.6;
+  font-size: 1.1rem;
+  color: #333;
+  margin-bottom: 0.5rem;
 }
 
-.rc-back-place {
-  font-weight: 600;
-}
-
-/* BOTONES */
+/* =============================
+   BOTONES
+============================= */
 .rc-back-buttons {
   margin-top: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
-  width: 100%;
+  gap: 0.9rem;
 }
 
-.rc-btn {
-  padding: 0.85rem;
+.rc-back-buttons a {
   font-family: "Cinzel", serif;
-  font-size: 0.7rem;
-  letter-spacing: 2px;
+  font-size: 0.8rem;
+  letter-spacing: 1.4px;
+
+  padding: 0.75rem 1.9rem;
+  border-radius: 999px;
+
+  border: 1px solid #000;
+  color: #000;
+  background: transparent;
   text-decoration: none;
+
   transition: all 0.3s ease;
-  text-align: center;
 }
 
-/* Botón principal */
-.rc-primary {
+.rc-back-buttons a:hover {
   background: #000;
   color: #fff;
 }
 
-.rc-primary:hover {
-  background: #222;
-}
-
-/* Botón secundario */
-.rc-secondary {
-  background: transparent;
-  color: #000;
-  border: 1px solid #000;
-}
-
-.rc-secondary:hover {
-  background: rgba(0, 0, 0, 0.05);
-}
-
-/* ===============================
-   ANIMACIÓN BORDE
-   =============================== */
-
-@keyframes rc-glow {
-  0% {
-    opacity: 0;
-  }
-  40% {
-    opacity: 0.15;
-  }
-  60% {
-    opacity: 0.25;
-  }
-  100% {
-    opacity: 0;
-  }
-}
-
-/* ===============================
+/* =============================
    MOBILE
-   =============================== */
-
+============================= */
 @media (max-width: 480px) {
-  .rc-card-container {
-    width: 90%;
-    height: 480px;
-  }
-
-  .rc-front-title {
-    font-size: 1.9rem;
+  .rc-section-title {
+    font-size: 2.6rem;
   }
 }
