@@ -1,18 +1,34 @@
+/* =============================
+   DynamicGallery
+============================= */
+
+@font-face {
+  font-family: "BrittanySignature";
+  src: url("/Font/BrittanySignature.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .gallery {
   display: flex;
   min-height: 70vh;
-  background-color: #f6efe9;
+  background-image: url("/img/fondoBlancoNew.jpeg");
 }
 
-/* Lado izquierdo */
+/* =============================
+   LADO IZQUIERDO
+============================= */
+
 .gallery__left {
+  font-family: "Playfair Display", serif;
   flex: 1;
-  background-color: #7e3f2e; /* Dark terracotta */
+  background-color: #333333;
   color: #fff5e6;
   display: flex;
   flex-direction: column;
   justify-content: center;
   padding: 3rem;
+  text-align: center;
 }
 
 .gallery__left h2 {
@@ -27,7 +43,10 @@
   line-height: 1.6;
 }
 
-/* Lado derecho */
+/* =============================
+   LADO DERECHO
+============================= */
+
 .gallery__right {
   flex: 1;
   display: flex;
@@ -51,6 +70,10 @@
   width: 100%;
   max-width: 280px;
 }
+
+/* =============================
+   BOTONES (BASE ORIGINAL)
+============================= */
 
 .gallery__button {
   padding: 14px;
@@ -86,7 +109,10 @@
   color: #6a3f32;
 }
 
-/* 📱 Responsive */
+/* =============================
+   RESPONSIVE
+============================= */
+
 @media (max-width: 768px) {
   .gallery {
     flex-direction: column;
@@ -100,4 +126,49 @@
   .gallery__left h2 {
     font-size: 2.2rem;
   }
+}
+
+/* ======================================================
+   OVERRIDE – BOTONES ESTILO CEREMONIA RELIGIOSA
+   (NO rompe estructura, solo look & feel)
+====================================================== */
+
+.gallery__button {
+  font-family: "Cinzel", serif;
+  font-size: 0.8rem;
+  letter-spacing: 1.4px;
+
+  padding: 0.75rem 1.9rem;
+  border-radius: 999px;
+
+  background: transparent;
+  border: 1px solid #000;
+  color: #000;
+
+  transition: all 0.3s ease;
+}
+
+/* Principal */
+.gallery__button.primary {
+  background: transparent;
+  color: #000;
+  border-color: #000;
+}
+
+.gallery__button.primary:hover {
+  background: #000;
+  border-color: #000;
+  color: #fff;
+}
+
+/* Secundario */
+.gallery__button.secondary {
+  background: transparent;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.gallery__button.secondary:hover {
+  background: #000;
+  color: #fff;
 }

@@ -1,14 +1,22 @@
+@font-face {
+  font-family: "BrittanySignature";
+  src: url("/Font/BrittanySignature.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .family {
   padding: 5rem 1.5rem;
-  background-color: #fff5f2;
+   background-image: url("/img/fondoBlancoNew.jpeg");
   text-align: center;
 }
 
 .family__title {
-  font-family: "Playfair Display", serif;
+  font-family: "BrittanySignature";
   font-size: 2.2rem;
-  color: #5a3a32;
+  color: #333333;
   margin-bottom: 3rem;
+  text-align: center;
 }
 
 .family__block {
@@ -18,24 +26,28 @@
 .family__block h3 {
   font-family: "Playfair Display", serif;
   font-size: 1.5rem;
-  color: #7a4a3a;
+  color: #333333;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .family__group {
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .family__group p {
   margin: 4px 0;
   font-size: 1rem;
-  color: #3a2a25;
+  color: #333333;
+  text-align: center;
 }
 
 .role {
   font-weight: 600;
-  color: #8a5a4a;
+  color: #333333;
   margin-bottom: 6px;
+  text-align: center;
 }
 
 .family__pair {
@@ -45,14 +57,16 @@
 .family__pair span {
   display: block;
   font-weight: 600;
-  color: #8a5a4a;
+  color: #333333;
   margin-bottom: 4px;
+  text-align: center;
 }
 
 .family__pair p {
   margin: 0;
   font-size: 1rem;
-  color: #3a2a25;
+  color: #333333;
+  text-align: center;
 }
 
 /* 🌐 Web */

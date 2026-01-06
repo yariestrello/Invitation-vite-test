@@ -1,7 +1,15 @@
 
+@font-face {
+  font-family: "BrittanySignature";
+  src: url("/Font/BrittanySignature.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 .dresscode {
   padding: 4rem 1.5rem;
-  background-color: #ffffff;
+ background-image: url("/img/fondoBlancoNew.jpeg");
   text-align: center;
 }
 
@@ -23,7 +31,7 @@
 
 /* Título */
 .dresscode__title {
-  font-family: "Playfair Display", serif;
+   font-family: "BrittanySignature";
   font-size: clamp(2rem, 4vw, 2.8rem);
   color: #333333; /* más legible que #3333 */
   margin-bottom: 2.2rem;

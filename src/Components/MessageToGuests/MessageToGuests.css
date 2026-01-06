@@ -1,8 +1,15 @@
 /* src/components/message/MessageToGuests.css */
 
+@font-face {
+  font-family: "BrittanySignature";
+  src: url("/Font/BrittanySignature.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .message-section {
   padding: 4rem 1rem;
-  background-color: #ffffff;
+  background-image: url("/img/fondoBlancoNew.jpeg");
   text-align: center;
 }
 
@@ -12,6 +19,7 @@
 }
 
 .message-title {
+   font-family: "BrittanySignature";
   font-size: clamp(2rem, 5vw, 2.5rem);
   color: #201f1f;
   margin-bottom: 1.5rem;

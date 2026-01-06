@@ -1,8 +1,17 @@
+
+@font-face {
+  font-family: "BrittanySignature";
+  src: url("/Font/BrittanySignature.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 .adults {
   display: flex;
   min-height: 70vh;
-  background-color: #f6efe9;
-  color: #5a2f26;
+  background-image: url("/img/fondoBlancoNew.jpeg");
+  color: #333333;
 }
 
 /* Texto */
@@ -11,25 +20,29 @@
   padding: 4rem 3rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  
+  text-align: center;
 }
 
 .adults__text h2 {
-  font-family: "Playfair Display", serif;
+  font-family: "BrittanySignature";
   font-size: 2.2rem;
-  color: #7e3f2e;
+  color: #333333;
   margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .adults__text p {
   font-size: 1.05rem;
   line-height: 1.7;
   margin-bottom: 1.2rem;
+  text-align: center;
 }
 
 .adults__thanks {
   font-style: italic;
   margin-top: 1rem;
+  text-align: center;
 }
 
 /* Imagen */

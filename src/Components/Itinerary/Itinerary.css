@@ -1,14 +1,23 @@
+@font-face {
+  font-family: "BrittanySignature";
+  src: url("/Font/BrittanySignature.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 .timeline {
   padding: 5rem 1.5rem;
-  background: #fff5f2;
+  background-image: url("/img/fondoBlancoNew.jpeg");
   text-align: center;
 }
 
 .timeline__title {
-  font-family: "Playfair Display", serif;
+  font-family: "BrittanySignature";
   font-size: 2.4rem;
   margin-bottom: 3rem;
-  color: #5a3a32;
+  color: #333333;
+  text-align: center;
 }
 
 .timeline__container {

@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "BrittanySignature";
+  src: url("/Font/BrittanySignature.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
 /* =============================
    SECCIÓN CON FONDO
 ============================= */
@@ -10,7 +18,7 @@
   justify-content: center;
   gap: 2rem;
 
-  background-image: url("/img/elrecuerdoIlustracion.png");
+  background-image: url("/img/fondoBlancoNew.jpeg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -24,8 +32,8 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.45);
-  backdrop-filter: blur(6px);
+  background: rgba(0, 0, 0, 0);
+  backdrop-filter: blur(2px);
   -webkit-backdrop-filter: blur(6px);
   z-index: 1;
 }
@@ -37,10 +45,10 @@
   position: relative;
   z-index: 2;
 
-  font-family: "Brittany Signature", cursive;
+  font-family: "BrittanySignature", cursive;
   font-size: 3.2rem;
   font-weight: 400;
-  color: #ffffff;
+  color: #333333;
 
   text-align: center;
   text-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
