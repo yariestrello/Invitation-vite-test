@@ -55,7 +55,7 @@
 
 /* Imagen responsiva y más grande */
 .dresscode__item img {
-  width: clamp(110px, 12vw, 170px); /* ↑ de 80px; escala con viewport */
+  width: clamp(130px, 13vw, 180px); /* ↑ de 80px; escala con viewport */
   height: auto;                     /* evita deformación */
   aspect-ratio: auto;               /* deja que la imagen mantenga su proporción */
   object-fit: contain;              /* asegura buen encuadre si usas un frame */
@@ -76,6 +76,7 @@
   font-size: 1rem;
   color: #33333f;
   line-height: 1.6;
+  text-align: center;
 }
 
 /* Ajustes en móviles: más grandes para compensar zoom */
@@ -84,7 +85,7 @@
     padding: 3rem 1rem;
   }
   .dresscode__item img {
-    width: clamp(130px, 40vw, 180px);
+    width: clamp(140px, 40vw, 180px);
   }
   .dresscode__title {
     font-size: clamp(1.8rem, 6vw, 2.4rem);

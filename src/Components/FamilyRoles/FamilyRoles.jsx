@@ -4,11 +4,11 @@ import "./FamilyRoles.css";
 export default function FamilyRoles() {
   return (
     <section className="family">
-      <h2 className="family__title">Con la Bendición de Nuestros Padres</h2>
+      <h2 className="family__title">Nuestros Padres</h2>
 
       {/* Padres */}
       <div className="family__block">
-        <h3>Nuestros Padres</h3>
+        
 
         <div className="family__group">
           <p className="role">De ella</p>
@@ -48,7 +48,7 @@ export default function FamilyRoles() {
 
         <div className="family__pair">
           <span>Biblia & Rosario</span>
-          <p>Dulce Maria Estrello</p>
+          <p>Dulce Maria Estrello & Usiel Sanchez</p>
         </div>
       </div>
 

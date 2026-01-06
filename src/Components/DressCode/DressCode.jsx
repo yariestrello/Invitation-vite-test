@@ -4,11 +4,6 @@ import "./DressCode.css";
 export default function DressCode() {
   return (
     <section className="dresscode">
-      <p className="dresscode__message">
-        Gracias por sus muestras de apoyo y cariño.  
-        Nos sentimos profundamente agradecidos por acompañarnos en este día tan especial.
-      </p>
-
       <h2 className="dresscode__title">Código de Vestimenta</h2>
 
       <div className="dresscode__icons">
