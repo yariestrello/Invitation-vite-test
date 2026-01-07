@@ -7,50 +7,80 @@
   font-style: normal;
 }
 
+/* =========================
+   HERO BASE
+   ========================= */
+
 .hero {
   min-height: 100vh;
-  background-image: url("/img/fondoUnoNew.jpeg");
+  background-image: url("/img/fondoBlancoNew.jpeg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
 }
 
+/* =========================
+   OVERLAY
+   ========================= */
+
 .hero-overlay {
-  background: rgba(0, 0, 0, 0.776);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
+
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(2px);
+}
+
+/* =========================
+   TEXTO
+   ========================= */
+
+.hero-title {
+  font-family: "AmsterdamFour";
+  font-size: clamp(1.8rem, 4vw, 2.4rem);
+  color: #333;
+  margin-bottom: 1.5rem;
+  text-align: center;
 }
 
 .hero-names {
   font-family: "AmsterdamFour";
-  font-size: clamp(2.2rem, 6vw, 4rem);
-  letter-spacing: 0.15rem;
+  font-size: clamp(2.4rem, 6vw, 4rem);
+  letter-spacing: 0.12rem;
+  color: #2c2c2c;
+  margin-top: 1.2rem;
+  text-align: center;
 }
 
 .hero-date {
   margin-top: 0.5rem;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  color: #555;
+  letter-spacing: 0.1rem;
+  text-align: center;
 }
 
-.music-btn {
-  margin-top: 1.5rem;
-  padding: 0.6rem 1.4rem;
-  border-radius: 20px;
-  border: none;
-  font-size: 1rem;
-  background: white;
-  color: black;
-  cursor: pointer;
+/* =========================
+   ELIMINAR CUALQUIER LÍNEA MORADA
+   ========================= */
+
+.hero-divider {
+  display: none !important;
+  height: 0 !important;
+  margin: 0 !important;
+  background: none !important;
 }
 
 /* =========================
    BOTÓN DE MÚSICA FLOTANTE
+   (NO SE TOCA)
    ========================= */
 
 .music-float-btn {
