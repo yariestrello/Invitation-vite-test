@@ -1,5 +1,5 @@
 // src/Pages/Invitation.jsx
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;1,600&family=Cormorant+Garamond:wght@400;500;600&family=Cinzel:wght@400;500;600&display=swap" rel="stylesheet"></link>
+
 import { useRef, useState } from "react";
 import WelcomeScreen from "../Components/Welcome/WelcomeScreen";
 import Hero from "../Components/Hero/Hero";
