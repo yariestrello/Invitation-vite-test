@@ -7,7 +7,7 @@ export default function Hero({ onToggleMusic, isPlaying }) {
         <h2 className="hero-title">Nuestra Historia</h2>
 
         <img
-          src="/img/fondoDosNew.jpeg"
+          src="/img/NoviosSinFondo.png"
           alt="Ilustración pareja"
           className="hero-image"
         />

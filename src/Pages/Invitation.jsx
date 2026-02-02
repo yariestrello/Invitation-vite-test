@@ -64,10 +64,9 @@ export default function Invitation() {
               hasStarted={!showWelcome}
             />
           </div>
-
+          <MessageToGuests />
           <ShortVideo src="/Videos/VideoPrueba.mp4" />
           <Countdown />
-          <MessageToGuests />
           <ReligiousCeremony />
           <CivilReception />
           <Itinerary />

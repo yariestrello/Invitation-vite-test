@@ -3,12 +3,13 @@
 .countdown {
   padding: 6rem 1rem;
   min-height: 100vh;
-
-  background:
+  color: #333333;
+  /*background:
     radial-gradient(circle at top left, rgba(255,255,255,0.08), transparent 40%),
     radial-gradient(circle at bottom right, rgba(255,255,255,0.05), transparent 45%),
-    linear-gradient(135deg, #111, #000);
-
+    linear-gradient(135deg, #111, #000);*/
+    
+  background-image: url("/img/fondoBlancoNew.jpeg");
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -19,7 +20,7 @@
 .countdown h1 {
   font-family: "Playfair Display", serif;
   font-size: 3rem;
-  color: #f2eee9;
+  color: #333333;
   letter-spacing: 4px;
   margin-bottom: 1rem;
   text-align: center;
@@ -29,7 +30,7 @@
 .countdown h2 {
   font-family: "Cormorant Garamond", serif;
   font-size: 1.5rem;
-  color: #d6d1c8;
+  color: #333333;
   letter-spacing: 1px;
   margin-bottom: 3rem;
   text-align: center;

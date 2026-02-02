@@ -22,8 +22,8 @@
 .gallery__left {
   font-family: "Playfair Display", serif;
   flex: 1;
-  background-color: #333333;
-  color: #fff5e6;
+  background-color: #ffffff;
+  color: #333;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,7 +59,7 @@
 
 .gallery__subtitle {
   font-size: 1.1rem;
-  color: #5a2f26;
+  color: #333;
   margin-bottom: 2rem;
 }
 
@@ -85,18 +85,18 @@
 
 /* Botón principal */
 .gallery__button.primary {
-  background-color: #7e3f2e;
+  background-color: #333333;
   color: #fff5e6;
 }
 
 .gallery__button.primary:hover {
-  background-color: #5f2e22;
+  background-color: #333333;
 }
 
 /* Botón secundario */
 .gallery__button.secondary {
-  border: 1px solid #7e3f2e;
-  color: #7e3f2e;
+  border: 1px solid #333333;
+  color: #333333;
 }
 
 .gallery__button.secondary:hover {
@@ -106,7 +106,7 @@
 .gallery__note {
   font-size: 0.85rem;
   margin-top: 1.2rem;
-  color: #6a3f32;
+  color: #333333;
 }
 
 /* =============================

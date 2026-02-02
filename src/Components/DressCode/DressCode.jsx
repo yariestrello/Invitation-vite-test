@@ -19,8 +19,7 @@ export default function DressCode() {
       </div>
 
       <p className="dresscode__description">
-        No mezclilla · No vestido blanco · No traje café ·  
-        No vestidos <strong>Dark Terracotta / Terracota "Especial Para Damas de honor"</strong>
+        No mezclilla · No vestido blanco · No traje café · No vestidos cortos
       </p>
     </section>
   );
