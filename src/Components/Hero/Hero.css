@@ -12,7 +12,7 @@
    ========================= */
 
 .hero {
-  min-height: 100vh;
+  min-height: 150vh;
   background-image: url("/img/fondoBlancoNew.jpeg");
   background-size: cover;
   background-position: center;
