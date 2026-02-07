@@ -16,6 +16,11 @@ export default function DynamicGallery() {
       {/* Lado derecho */}
       <div className="gallery__right">
 
+        <img 
+          src="/img/Camara.png" 
+          alt="Cámara" 
+          className="gallery__icon"
+        />
         <p className="gallery__subtitle">
           Descarga la app y entra como invitado
         </p>

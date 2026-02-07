@@ -13,7 +13,7 @@
 
 .gifts__title {
   font-family: "BrittanySignature", serif;
-  font-size: 2.2rem;
+  font-size: 3.2rem;
   color: #333333;
   margin-bottom: 1.5rem;
   text-align: center;
@@ -67,7 +67,7 @@
   }
 
   .gifts__options {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
   }
 
   .gifts__title {

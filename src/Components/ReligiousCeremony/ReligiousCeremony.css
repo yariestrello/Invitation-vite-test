@@ -40,14 +40,14 @@
 .rc-section-title {
   position: relative;
   z-index: 2;
-
+  
   font-family: "BrittanySignature", cursive;
   font-size: 3.2rem;
   font-weight: 400;
   color: #333333;
 
   text-align: center;
-  text-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+  
 }
 
 /* =============================

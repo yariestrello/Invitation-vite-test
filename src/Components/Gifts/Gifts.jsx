@@ -12,12 +12,7 @@ export default function Gifts() {
       </p>
 
       <div className="gifts__options">
-        <div className="gift__card">
-          <span className="gift__icon">🎁</span>
-          <h3>Mesa de Regalos</h3>
-          <p>Tienda departamental</p>
-        </div>
-
+        
         <div className="gift__card">
           <span className="gift__icon">💌</span>
           <h3>Sobre</h3>
@@ -27,7 +22,7 @@ export default function Gifts() {
         <div className="gift__card">
           <span className="gift__icon">💳</span>
           <h3>Transferencia</h3>
-          <p>Cuenta Clabe: xxxxxxxxxxxxxx </p>
+          <p>Cuenta Clabe: 012076015267397411 </p>
           <p>Nombre: Yaritza Estrello </p>
         </div>
       </div>
