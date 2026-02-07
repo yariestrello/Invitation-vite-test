@@ -24,7 +24,7 @@
 
   padding: 3.5rem 3rem;
   text-align: center;
- border-radius: 10%;
+  border-radius: 10%;
   box-shadow: 0 6px 15px rgba(0,0,0,0.15);
 }
 
@@ -86,6 +86,66 @@
 }
 
 /* =============================
+   SELECTOR DE CANTIDAD
+============================= */
+
+.confirm__selector-container {
+  display: flex;
+  flex-direction: column; /* vertical por defecto */
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1.5rem;
+}
+
+/* Select estilizado */
+.confirm__select {
+  font-family: "Cinzel", serif;
+  text-align: center;
+  padding: 0.9rem 1.2rem;
+  border-radius: 999px;
+  border: 1px solid #000;
+  font-size: 0.8rem;
+  letter-spacing: 1.4px;
+  outline: none;
+  cursor: pointer;
+
+  background-color: #fff; /* fondo blanco */
+  color: #333; /* texto oscuro */
+  appearance: none; /* quitar estilo por defecto del navegador */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  transition: all 0.3s ease;
+}
+
+.confirm__select:hover {
+  border-color: #000;
+}
+
+/* Opciones del select */
+.confirm__select option {
+  background-color: #fff; /* fondo blanco */
+  color: #333; /* texto oscuro */
+}
+
+.confirm__select option:checked {
+  background-color: #fff; /* fondo blanco */
+  color: #333; /* texto oscuro */
+}
+
+/* Quitar flecha azul en IE/Edge */
+.confirm__select::-ms-expand {
+  display: none;
+}
+
+/* Quitar flechas de spin en Chrome/Edge */
+.confirm__select::-webkit-inner-spin-button,
+.confirm__select::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* =============================
    MOBILE
 ============================= */
 
@@ -101,5 +161,12 @@
 
   .confirm__content h2 {
     font-size: 2rem;
+  }
+}
+
+/* En desktop, separar más el select del botón */
+@media (min-width: 769px) {
+  .confirm__selector-container {
+    gap: 1.5rem;
   }
 }
