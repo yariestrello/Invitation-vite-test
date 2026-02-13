@@ -1,6 +1,3 @@
-Aquí tienes tu Hero.css completo, no se quitó ni modificó nada de lo que ya tenías.
-Solo se agregó al final la sección para que la imagen /img/NoviosSinFondo.png sea responsiva en móvil.
-
 /* src/components/hero/Hero.css */
 
 @font-face {
@@ -114,15 +111,14 @@ Solo se agregó al final la sección para que la imagen /img/NoviosSinFondo.png 
 
 
 /* =====================================================
-   ✅ AJUSTE RESPONSIVO SOLO PARA LA IMAGEN DE LOS NOVIOS
-   (NO altera nada de tu diseño existente)
+   IMAGEN DE LOS NOVIOS
    ===================================================== */
 
 .hero-image {
   display: block;
   margin: 0 auto;
 
-  /* Tamaño elegante en escritorio */
+  /* Tamaño equilibrado en escritorio */
   width: clamp(260px, 32vw, 420px);
   height: auto;
 
@@ -131,38 +127,45 @@ Solo se agregó al final la sección para que la imagen /img/NoviosSinFondo.png 
 
 
 
-/* =========================
-   TABLET Y MÓVIL
-   ========================= */
+/* =====================================================
+   📱 FIX REAL PARA MÓVIL (aquí estaba el problema)
+   ===================================================== */
 
 @media (max-width: 768px) {
+
+  /* Quitamos el exceso de altura que hacía ver todo mal */
+  .hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
   .hero-image {
-    width: 72vw;
-    max-width: 380px;
+    width: min(85vw, 420px);
   }
 }
 
 
 
-/* =========================
-   CELULARES
-   ========================= */
+/* =====================================================
+   📱 CELULARES PEQUEÑOS
+   ===================================================== */
 
 @media (max-width: 480px) {
   .hero-image {
-    width: 82vw;
-    max-width: 420px;
+    width: min(88vw, 440px);
   }
 }
 
 
 
-/* =========================
-   CELULARES ALTOS (iPhone Plus / Pro Max)
-   ========================= */
+/* =====================================================
+   📱 iPhone altos (Pro Max, etc.)
+   ===================================================== */
 
 @media (max-height: 740px) {
   .hero-image {
-    width: 78vw;
+    width: 82vw;
   }
 }
