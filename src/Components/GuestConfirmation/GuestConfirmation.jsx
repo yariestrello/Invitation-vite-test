@@ -32,11 +32,11 @@ export default function GuestConfirmation() {
       return;
     }
 
-    // Si ya confirmaron, mostrar datos
+    // Si ya confirmaron antes, siempre mostrar confirmación (aunque la fecha ya haya pasado)
     if (data.confirmado) {
       setGuest(data);
+      setSelectedAttendees(data.confirmados || 0);
       setConfirmed(true);
-      setSelectedAttendees(data.confirmados);
       return;
     }
 
@@ -46,6 +46,12 @@ export default function GuestConfirmation() {
   // Confirmar asistencia
   const confirmAttendance = async () => {
     if (selectedAttendees === 0) return;
+
+    // Protección extra por si alguien intenta confirmar fuera de fecha
+    if (isClosed) {
+      alert("La fecha de confirmación ya ha concluido.");
+      return;
+    }
 
     setLoading(true);
 
@@ -65,8 +71,18 @@ export default function GuestConfirmation() {
     }
   };
 
-  // Revisar si la fecha de cierre ya pasó
-  const isClosed = guest && !guest.confirmado && new Date(guest.Fecha_Cierre) < new Date();
+  // 🔥 Validación correcta de fecha (CIERRA AL FINAL DEL DÍA)
+  const isClosed = (() => {
+    if (!guest || guest.confirmado) return false;
+
+    const today = new Date();
+    today.setHours(0, 0, 0, 0); // quitar hora actual
+
+    const closingDate = new Date(guest.Fecha_Cierre);
+    closingDate.setHours(23, 59, 59, 999); // permitir TODO el día de cierre
+
+    return today > closingDate;
+  })();
 
   return (
     <section className="confirm">
@@ -145,16 +161,17 @@ export default function GuestConfirmation() {
           </>
         )}
 
-        {/* Confirmación final */}
-        {confirmed && (
+        {/* Confirmación final (persistente aunque recarguen) */}
+        {(confirmed || guest?.confirmado) && (
           <>
             <h2>¡Gracias! 💖</h2>
             <p>
               El día de nuestra boda será una noche mágica y especial, y que nos acompañes
               {selectedAttendees === 1 ? "" : " junto a tu familia"} la hace aún más especial.  
-              Hemos reservado un lugar para <strong>{selectedAttendees}</strong> {selectedAttendees === 1 ? "persona" : "personas"}.
+              Hemos reservado un lugar para <strong>{selectedAttendees}</strong>{" "}
+              {selectedAttendees === 1 ? "persona" : "personas"}.
               <br />
-              <strong>El tiempo de registro de asistencia ha Concluido.</strong>
+              <strong>El tiempo de registro de asistencia ha concluido.</strong>
               <br />
               ¡Los esperamos con mucha ilusión!
             </p>

@@ -15,6 +15,7 @@ import DressCode from "../Components/DressCode/DressCode";
 import AdultsOnly from "../Components/AdultsOnly/AdultsOnly";
 import DynamicGallery from "../Components/DynamicGallery/DynamicGallery";
 import GuestConfirmation from "../Components/GuestConfirmation/GuestConfirmation";
+import Gallery from "../Components/WeddingGallery.css/WeddingGallery";
 
 export default function Invitation() {
   const audioRef = useRef(null);
@@ -76,6 +77,7 @@ export default function Invitation() {
           <DressCode />
           <AdultsOnly />
           <DynamicGallery />
+          <Gallery/>
           <GuestConfirmation />
 
           
