@@ -111,29 +111,26 @@
 
 
 /* =====================================================
-   IMAGEN DE LOS NOVIOS
+   IMAGEN DE LOS NOVIOS (DESKTOP NORMAL)
    ===================================================== */
 
 .hero-image {
   display: block;
   margin: 0 auto;
-
-  /* Tamaño equilibrado en escritorio */
   width: clamp(260px, 32vw, 420px);
   height: auto;
-
   object-fit: contain;
 }
 
 
 
 /* =====================================================
-   📱 FIX REAL PARA MÓVIL (aquí estaba el problema)
+   📱 AJUSTE REAL PARA MÓVIL
    ===================================================== */
 
 @media (max-width: 768px) {
 
-  /* Quitamos el exceso de altura que hacía ver todo mal */
+  /* Quitamos la altura exagerada solo en móvil */
   .hero {
     min-height: 100vh;
     display: flex;
@@ -141,8 +138,26 @@
     justify-content: center;
   }
 
+  .hero-content {
+    width: 100%;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  /* 🔥 Imagen más protagonista */
   .hero-image {
-    width: min(85vw, 420px);
+    width: auto;
+    height: 52vh;
+    max-height: 620px;
+  }
+
+  /* Ajuste fino de espacios */
+  .hero-title {
+    margin-bottom: 1rem;
+  }
+
+  .hero-names {
+    margin-top: 0.8rem;
   }
 }
 
@@ -154,18 +169,20 @@
 
 @media (max-width: 480px) {
   .hero-image {
-    width: min(88vw, 440px);
+    height: 56vh;
+    max-height: 640px;
   }
 }
 
 
 
 /* =====================================================
-   📱 iPhone altos (Pro Max, etc.)
+   📱 TELÉFONOS ALTOS (iPhone 14/15 Pro Max, etc.)
    ===================================================== */
 
-@media (max-height: 740px) {
+@media (min-height: 800px) and (max-width: 500px) {
   .hero-image {
-    width: 82vw;
+    height: 58vh;
+    max-height: 680px;
   }
 }
