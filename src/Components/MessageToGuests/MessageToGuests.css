@@ -7,6 +7,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "AmsterdamFour";
+  src: url("/Font/AmsterdamFour.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .message-section {
   padding: 4rem 1rem;
   background-image: url("/img/fondoBlancoNew.jpeg");
@@ -19,7 +26,7 @@
 }
 
 .message-title {
-  font-family: "BrittanySignature";
+  font-family: "AmsterdamFour";
   font-size: clamp(2.2rem, 5vw, 2.6rem);
   color: #201f1f;
   margin-bottom: 1.5rem;

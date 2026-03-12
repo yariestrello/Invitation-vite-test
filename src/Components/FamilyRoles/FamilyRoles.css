@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "AmsterdamFour";
+  src: url("/Font/AmsterdamFour.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 .family {
   padding: 5rem 1.5rem;
    background-image: url("/img/fondoBlancoNew.jpeg");
@@ -12,7 +19,7 @@
 }
 
 .family__title {
-  font-family: "BrittanySignature";
+  font-family: "AmsterdamFour";
   font-size: 2.2rem;
   color: #333333;
   margin-bottom: 3rem;
@@ -25,8 +32,8 @@
 }
 
 .family__block h3 {
-  font-family: "BrittanySignature";
-  font-size: 1.5rem;
+  font-family: "AmsterdamFour";
+  font-size: 2.2rem;
   color: #333333;
   margin-bottom: 1.5rem;
   text-align: center;

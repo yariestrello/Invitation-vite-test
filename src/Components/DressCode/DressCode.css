@@ -6,6 +6,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "AmsterdamFour";
+  src: url("/Font/AmsterdamFour.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 .dresscode {
   padding: 4rem 1.5rem;
@@ -31,7 +37,7 @@
 
 /* Título */
 .dresscode__title {
-   font-family: "BrittanySignature";
+   font-family: "AmsterdamFour";
   font-size: clamp(2rem, 4vw, 2.8rem);
   color: #333333; /* más legible que #3333 */
   margin-bottom: 2.2rem;

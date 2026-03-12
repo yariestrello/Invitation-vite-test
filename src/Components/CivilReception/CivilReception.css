@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "AmsterdamFour";
+  src: url("/Font/AmsterdamFour.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 /* =============================
    SECCIÓN CON FONDO
@@ -44,7 +51,7 @@
 .cr-section-title {
   position: relative;
   z-index: 2;
-  font-family: "BrittanySignature", cursive;
+  font-family: "AmsterdamFour", cursive;
   font-size: 3.2rem;
   font-weight: 400;
   color: #333333;

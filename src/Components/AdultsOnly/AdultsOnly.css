@@ -6,6 +6,12 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "AmsterdamFour";
+  src: url("/Font/AmsterdamFour.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
 .adults {
   display: flex;
@@ -25,7 +31,7 @@
 }
 
 .adults__text h2 {
-  font-family: "BrittanySignature";
+  font-family: "AmsterdamFour";
   font-size: 2.2rem;
   color: #333333;
   margin-bottom: 1.5rem;

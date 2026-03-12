@@ -5,6 +5,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: "AmsterdamFour";
+  src: url("/Font/AmsterdamFour.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* ===== CONTENEDOR PRINCIPAL ===== */
 .timeline {
   padding: 5rem 1.5rem;
@@ -16,7 +23,7 @@
 
 /* ===== TITULO ===== */
 .timeline__title {
-  font-family: "BrittanySignature";
+  font-family: "AmsterdamFour";
   font-size: 3rem;
   margin-bottom: 4rem;
   text-align: center;
