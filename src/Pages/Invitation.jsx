@@ -67,7 +67,7 @@ export default function Invitation() {
             />
           </div>
           <MessageToGuests />
-          <ShortVideo src="/Videos/VideoPrueba.mp4" />
+          <ShortVideo src="/Videos/savethedatereel.mp4" />
           <Countdown />
           <ReligiousCeremony />
           <CivilReception />
