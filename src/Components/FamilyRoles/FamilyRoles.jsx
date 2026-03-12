@@ -12,13 +12,13 @@ export default function FamilyRoles() {
 
         <div className="family__group">
           <p className="role">De ella</p>
-          <p>Petra Estrello</p>
+          <p>Petra Estrello González</p>
         </div>
 
         <div className="family__group">
           <p className="role">De él</p>
-          <p>Ramón García</p>
-          <p>Rebeca Bernal</p>
+          <p>Ramón García Mireles</p>
+          <p>Rebeca Bernal Flores</p>
         </div>
       </div>
 
@@ -28,27 +28,27 @@ export default function FamilyRoles() {
 
         <div className="family__pair">
           <span>Lazo</span>
-          <p>Jose Manuel Silva & Rebeca Garcia</p>
+          <p>José Manuel Silva & Rebeca García</p>
         </div>
 
         <div className="family__pair">
           <span>Anillos</span>
-          <p>Jorge Garcia & Silvia Lopez</p>
+          <p>Jorge García & Silvia López</p>
         </div>
 
         <div className="family__pair">
           <span>Arras</span>
-          <p>Maria Fernanda Garcia & William Covarrubias</p>
+          <p>Maria Fernanda García & William Covarrubias</p>
         </div>
 
         <div className="family__pair">
           <span>Velación</span>
-          <p>Ramón García & Rebeca Bernal</p>
+          <p>Ramón García Mireles & Rebeca Bernal Flores</p>
         </div>
 
         <div className="family__pair">
           <span>Biblia & Rosario</span>
-          <p>Dulce Maria Estrello & Usiel Sanchez</p>
+          <p>Dulce Maria Estrello & Usiel Sánchez</p>
         </div>
       </div>
 
@@ -59,12 +59,12 @@ export default function FamilyRoles() {
         <div className="family__group">
           <p className="role">De ella</p>
           <p>Diego Guerrero</p>
-          <p>Karla Garcia</p>
+          <p>Karla García</p>
         </div>
 
         <div className="family__group">
           <p className="role">De él</p>
-          <p>Juan Manuel Garcia</p>
+          <p>Juan Manuel García</p>
           <p>Cynthia Constancio</p>
         </div>
       </div>
