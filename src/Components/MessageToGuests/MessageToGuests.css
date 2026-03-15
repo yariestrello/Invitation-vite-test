@@ -17,6 +17,9 @@
 .message-section {
   padding: 4rem 1rem;
   background-image: url("/img/fondoBlancoNew.jpeg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
 }
 
@@ -27,15 +30,76 @@
 
 .message-title {
   font-family: "AmsterdamFour";
-  font-size: clamp(2.2rem, 5vw, 2.6rem);
+  font-size: clamp(2.0rem, 5vw, 2.6rem);
   color: #201f1f;
   margin-bottom: 1.5rem;
   text-align: center;
+  line-height: 1.05;
 }
 
 .message-text {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.8;
   color: #333;
   text-align: center;
+  margin: 0;
+}
+
+/* ✅ Divider con corazón elegante (como tu ejemplo) */
+.message-divider{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  margin-top: clamp(1.6rem, 3.5vw, 2.2rem);
+  color: #201f1f;       /* mismo tono que tu título */
+  opacity: 0.85;
+}
+
+.message-divider-line{
+  width: clamp(44px, 12vw, 90px);
+  height: 1px;
+  background: #cfcfcf;
+  border-radius: 2px;
+}
+
+.message-divider-heart{
+  width: 26px;
+  height: auto;
+  transform: translateY(1px);
+}
+
+/* ✅ Ajustes para móvil (para que se vea aireado y no se encime) */
+@media (max-width: 420px){
+  .message-section{
+    padding: 3.2rem 1rem;
+  }
+
+  .message-container{
+    max-width: 520px;
+  }
+
+  .message-text{
+    font-size: 1.08rem;
+    line-height: 1.85;
+  }
+
+  .message-divider-line{
+    width: clamp(36px, 10vw, 70px);
+  }
+
+  .message-divider-heart{
+    width: 24px;
+  }
+}
+
+/* ✅ Ornamento PNG (argollas con corazón) */
+.message-ornament{
+  display: block;
+  margin: clamp(1.6rem, 3.5vw, 2.2rem) auto 0;
+  width: clamp(140px, 18vw, 110px);
+  height: auto;
+  opacity: 0.9;
+  pointer-events: none;
+  user-select: none;
 }
