@@ -27,7 +27,7 @@ const events = [
     alt: "Vals y baile"
   },
   {
-    time: "9:30 PM",
+    time: "9:00 PM",
     title: "Cena",
     icon: "/img/icono cena.png",
     alt: "Cena"

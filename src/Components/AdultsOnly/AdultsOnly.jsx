@@ -6,7 +6,7 @@ export default function AdultsOnly() {
       
       {/* Texto */}
       <div className="adults__text">
-        <h2>Un momento para disfrutar</h2>
+        <h2>Un momento para disfrutar...</h2>
         <p>
           Hemos soñado este día como un espacio para relajarnos,
           celebrar el amor y compartir con ustedes sin prisas.
@@ -24,7 +24,7 @@ export default function AdultsOnly() {
 
       {/* Imagen */}
       <div className="adults__image">
-        <img src="/img/Pareja.jpg" alt="Nuestra historia" />
+        <img src="/img/Yaritza-y-Gael-74.jpg" alt="Nuestra historia" />
       </div>
 
     </section>

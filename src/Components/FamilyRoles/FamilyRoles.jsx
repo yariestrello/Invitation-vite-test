@@ -58,7 +58,7 @@ export default function FamilyRoles() {
 
         <div className="family__group">
           <p className="role">De ella</p>
-          <p>Diego Guerrero Flores</p>
+          <p>Diego Guerrero</p>
           <p>Karla García</p>
         </div>
 

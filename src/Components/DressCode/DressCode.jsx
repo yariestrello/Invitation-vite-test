@@ -19,8 +19,22 @@ export default function DressCode() {
       </div>
 
       <p className="dresscode__description">
-        No mezclilla · No vestido blanco · No traje café · No vestidos cortos
+        No mezclilla · No vestido blanco · No traje café 
       </p>
-    </section>
+<br />
+      {/* Sección: Colores reservados */}
+
+  <h3 className="reserved-colors__title">Colores reservados</h3>
+  <p className="reserved-colors__subtitle">
+    Por favor, evita estos tonos (Damas de honor).
+  </p>
+<br />
+  <div className="reserved-colors__swatches">
+    <span className="swatch" style={{ backgroundColor: "#fac55c" }} aria-hidden="true" />
+    <span className="swatch" style={{ backgroundColor: "#B0124D" }} aria-hidden="true" />
+    <span className="swatch" style={{ backgroundColor: "#f96e33" }} aria-hidden="true" />
+  </div>
+</section>
+    
   );
 }
