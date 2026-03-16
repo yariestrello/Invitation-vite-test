@@ -107,7 +107,7 @@ export default function GuestConfirmation() {
               <button type="submit" className="confirm__button">
                 {loading ? "Validando..." : "Confirmar asistencia"}
               </button>
-              <p>Cierre de confirmación: 10/04/2026</p>
+              <p className="fecha_form"> Cierre de confirmación: 10/04/2026</p>
             </form>
           </>
         )}
