@@ -1,150 +1,151 @@
 /* ===== Fondo ===== */
-.wg-bg{
-  --wg-bg-url: url("/img/fondoBlancoNew.jpeg");
-  --wg-frame-max: 720px; /* puede cambiarse por inline style */
-  background-image: var(--wg-bg-url);
-  background-size: 600px auto;
-  background-repeat: repeat;
-  background-position: center;
+@font-face {
+  font-family: "AmsterdamFour";
+  src: url("/Font/AmsterdamFour.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
 
-/* ===== Estructura ===== */
-.wg-section{
-  display: grid;
-  gap: clamp(12px, 3vw, 24px);
-  justify-items: center;
-  padding: clamp(12px, 4vw, 32px);
-}
-
-.wg-container{
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-  gap: clamp(8px, 3vw, 24px);
-  width: 100%;
-  max-width: calc(var(--wg-frame-max) + 120px); /* espacio para flechas */
-  margin-inline: auto;
-}
-
-/* Flechas */
-.wg-arrow{
-  width: clamp(34px, 5vw, 48px);
-  height: clamp(34px, 5vw, 48px);
-  border: none; border-radius: 999px;
-  background: rgba(255,255,255,.9);
-  color: #1f2937;
-  font-size: clamp(22px, 3.2vw, 32px);
-  box-shadow: 0 4px 14px rgba(0,0,0,.12);
-  display: grid; place-items: center;
-  cursor: pointer;
-}
-.wg-arrow:hover{ background: #fff; }
-
-/* ===== Frame: ancho responsive real ===== */
-.wg-frame{
-  position: relative;
-  width: clamp(260px, 60vw, var(--wg-frame-max));
-  aspect-ratio: 3 / 5;
-  border-radius: clamp(16px, 2vw, 22px);
-  overflow: hidden;
-  background: #f7f7f7;
-  box-shadow: 0 12px 32px rgba(0,0,0,.18);
-  isolation: isolate;
-}
-
-/* Imagen (BN + ajuste) */
-.wg-image{
-  width: 100%; height: 100%;
-  object-fit: cover;
-  filter: grayscale(100%) contrast(1.06) brightness(1.05);
-  transform: scale(1.02);
-  transition: filter .45s ease;
-}
-.wg-frame:hover .wg-image{
-  filter: grayscale(0%) contrast(1.06) brightness(1.03);
-}
-
-/* Viñeta */
-.wg-vignette{
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(120% 85% at 50% 50%,
-      rgba(0,0,0,0) 55%,
-      rgba(0,0,0,.15) 78%,
-      rgba(0,0,0,.32) 100%);
-  mix-blend-mode: multiply;
-  z-index: 1;
-}
-
-/* Nombres / fecha (opcionales) */
-.wg-caption{
-  position: absolute; left: 0; right: 0;
-  bottom: clamp(26px, 4vw, 52px);
-  padding: 0 clamp(12px, 3vw, 22px);
+.wg-title{
+  font-family: "AmsterdamFour", serif;
+  font-size: clamp(1.5rem, 5vw, 2.4rem);
+  line-height: 1.05;
   text-align: center;
-  color: #2b2b2b;
-  z-index: 2;
-  font-family: var(--names-font, "Playfair Display","Libre Baskerville",Georgia,serif);
-}
-.wg-cardTitle{
-  margin: 0;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: .06em;
-  font-size: clamp(16px, 2.4vw, 22px);
-}
-.wg-author{
-  font-size: clamp(12px, 1.8vw, 15px);
-  opacity: .85;
+
+  /* 🔥 CONTRASTE (lo que te está faltando) */
+  color: #201f1f !important;
+  opacity: 1 !important;
+
+  /* 🔥 Asegura que quede arriba de las polaroids/efectos */
+  position: relative;
+  z-index: 10;
+
+  /* Espaciado */
+  margin: 0 auto 1.2rem;
+  padding: 0 0.75rem;
+  max-width: 22ch;
+
+  /* 🔥 Ayuda a que resalte sobre fondo claro (muy sutil, elegante) */
+  text-shadow: 0 1px 0 rgba(255,255,255,0.65);
 }
 
-/* Contador */
-.wg-pill{
-  position: absolute;
-  top: clamp(8px, 1.5vw, 14px);
-  left: clamp(8px, 1.5vw, 14px);
-  background: rgba(255,255,255,.85);
-  color: #1f2937;
-  padding: 6px 12px;
-  border-radius: 999px;
-  font: 600 clamp(10px, 1.6vw, 13px)/1 ui-sans-serif, system-ui;
-  backdrop-filter: blur(2px);
-  z-index: 3;
+
+
+.wg-section{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  padding:60px 20px;
+
+  background-image:url("/img/fondoBlancoNew.jpeg");
+  background-size:600px auto;
+  background-repeat:repeat;
+  background-position:center;
 }
 
-/* Papel rasgado */
-.wg-torn{
-  position: absolute; inset-inline: 0; bottom: 0;
-  height: clamp(46px, 8vw, 74px);
-  background: #fff; z-index: 2;
+/* ===== Contenedor ===== */
 
-  -webkit-mask:
-    radial-gradient(24px 12px at 10% 0, transparent 98%, black 100%),
-    radial-gradient(32px 14px at 30% 6px, transparent 98%, black 100%),
-    radial-gradient(28px 12px at 55% 2px, transparent 98%, black 100%),
-    radial-gradient(34px 16px at 75% 8px, transparent 98%, black 100%),
-    radial-gradient(26px 12px at 92% 4px, transparent 98%, black 100%);
-  -webkit-mask-composite: source-over;
-  mask-composite: add;
-
-  box-shadow: 0 -1px 0 rgba(0,0,0,.05),
-              0 -12px 26px rgba(0,0,0,.14) inset;
+.wg-polaroid-strip{
+  position:relative;
+  width:360px;
+  height:240px;
 }
 
-/* Dots */
-.wg-dots{
-  display: flex; gap: 8px; justify-content: center; margin-top: 6px;
-}
-.wg-dot{
-  width: clamp(8px, 1.8vw, 12px);
-  height: clamp(8px, 1.8vw, 12px);
-  border-radius: 50%; border: none;
-  background: #d1d5db;
-}
-.wg-dot.wg-active{ background: #374151; }
+/* ===== Marco Polaroid ===== */
 
-/* Más aire en pantallas XL */
-@media (min-width: 1280px){
-  .wg-container{ gap: 28px; }
-  .wg-frame{ width: min(42vw, var(--wg-frame-max)); }
+.wg-polaroid{
+  position:absolute;
+  width:120px;
+  background:white;
+  padding:8px 8px 24px 8px;
+  border-radius:4px;
+  box-shadow:0 12px 25px rgba(0,0,0,.25);
+  cursor:pointer;
+  transition:transform .3s ease;
+}
+
+.wg-polaroid:hover{
+  transform:scale(1.05);
+  z-index:10;
+}
+
+/* ===== Imagen ===== */
+
+.wg-polaroid-img{
+  width:100%;
+  height:140px;
+  object-fit:cover;
+  filter:grayscale(100%);
+}
+
+/* ===== Posiciones tipo collage ===== */
+
+.wg-polaroid-0{
+  left:30px;
+  top:60px;
+  transform:rotate(-12deg);
+}
+
+.wg-polaroid-1{
+  left:140px;
+  top:40px;
+  transform:rotate(0deg);
+}
+
+.wg-polaroid-2{
+  left:250px;
+  top:60px;
+  transform:rotate(10deg);
+}
+
+/* ===== Lightbox fullscreen ===== */
+
+.wg-lightbox{
+  position:fixed;
+  inset:0;
+  background:rgba(0,0,0,.92);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  z-index:9999;
+  padding:20px;
+}
+
+.wg-lightbox-img{
+  max-width:90%;
+  max-height:90%;
+  object-fit:contain;
+  border-radius:8px;
+  box-shadow:0 20px 60px rgba(0,0,0,.6);
+}
+
+/* ===== Responsive ===== */
+
+@media (max-width:480px){
+
+  .wg-polaroid-strip{
+    width:300px;
+    height:220px;
+  }
+
+  .wg-polaroid{
+    width:100px;
+  }
+
+  .wg-polaroid-img{
+    height:120px;
+  }
+
+  .wg-polaroid-0{
+    left:10px;
+  }
+
+  .wg-polaroid-1{
+    left:100px;
+  }
+
+  .wg-polaroid-2{
+    left:190px;
+  }
+
 }

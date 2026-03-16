@@ -57,16 +57,14 @@ export default function FamilyRoles() {
         <h3>Nuestros Testigos</h3>
 
         <div className="family__group">
-          <p className="role">De ella</p>
+          
           <p>Diego Guerrero</p>
           <p>Karla García</p>
-        </div>
-
-        <div className="family__group">
-          <p className="role">De él</p>
           <p>Juan Manuel García</p>
           <p>Cynthia Constancio</p>
         </div>
+
+    
       </div>
     </section>
   );

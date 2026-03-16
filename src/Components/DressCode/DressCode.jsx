@@ -31,7 +31,7 @@ export default function DressCode() {
 <br />
   <div className="reserved-colors__swatches">
     <span className="swatch" style={{ backgroundColor: "#fac55c" }} aria-hidden="true" />
-    <span className="swatch" style={{ backgroundColor: "#B0124D" }} aria-hidden="true" />
+    <span className="swatch" style={{ backgroundColor: "#d13770" }} aria-hidden="true" />
     <span className="swatch" style={{ backgroundColor: "#f96e33" }} aria-hidden="true" />
   </div>
 </section>
