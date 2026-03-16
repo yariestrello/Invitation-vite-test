@@ -168,7 +168,7 @@ export default function GuestConfirmation() {
             <h2>¡Gracias! 💖</h2>
             <p>
               El día de nuestra boda será una noche mágica y especial, y que nos acompañes
-              {selectedAttendees === 1 ? "" : " junto a tu familia"} la hace aún más especial.  
+              {selectedAttendees === 1 ? "" : " junto a tu familia"} la hace aún más.  
               Hemos reservado un lugar para <strong>{selectedAttendees}</strong>{" "}
               {selectedAttendees === 1 ? "persona" : "personas"}.
               <br />

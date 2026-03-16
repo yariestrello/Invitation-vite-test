@@ -12,13 +12,13 @@ export default function FamilyRoles() {
 
         <div className="family__group">
           <p className="role">De ella</p>
-          <p>Petra Estrello González</p>
+          <p>Petra Estrello</p>
         </div>
 
         <div className="family__group">
           <p className="role">De él</p>
-          <p>Ramón García Mireles</p>
-          <p>Rebeca Bernal Flores</p>
+          <p>Ramón García</p>
+          <p>Rebeca Bernal</p>
         </div>
       </div>
 
@@ -43,7 +43,7 @@ export default function FamilyRoles() {
 
         <div className="family__pair">
           <span>Velación</span>
-          <p>Ramón García Mireles & Rebeca Bernal Flores</p>
+          <p>Ramón García & Rebeca Bernal</p>
         </div>
 
         <div className="family__pair">
