@@ -24,7 +24,7 @@ export default function AdultsOnly() {
 
       {/* Imagen */}
       <div className="adults__image">
-        <img src="/img/Yaritza-y-Gael-74.jpg" alt="Nuestra historia" />
+        <img src="/img/img74.jpg" alt="Nuestra historia" />
       </div>
 
     </section>

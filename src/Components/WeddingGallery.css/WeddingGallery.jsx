@@ -10,7 +10,15 @@ const images = [
   "/img/img140.jpg",
   "/img/img96.jpg",
   "/img/img43.jpg",
-  "/img/img109.jpg"
+  "/img/img109.jpg",
+  "/img/img65.jpg",
+  "/img/img72.jpg",
+  "/img/img64.jpg",
+  "/img/img105.jpg",
+  "/img/img5.jpg",
+  "/img/img125.jpg",
+  "/img/img51.jpg",
+  "/img/img79.jpg",
 ];
 
 export default function WeddingGallery() {

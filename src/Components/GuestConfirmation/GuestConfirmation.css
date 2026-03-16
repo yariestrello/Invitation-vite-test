@@ -2,6 +2,14 @@
    CONFIRMACION FINAL
 ============================= */
 
+.fecha_form {
+  font-family: "Cinzel", serif;
+  font-size: 0.1rem;
+  color: #333333;
+  margin-top: 1rem;
+}
+
+
 .confirm {
   background-image: url("/img/fondoBlancoNew.jpeg");
   background-size: cover;
